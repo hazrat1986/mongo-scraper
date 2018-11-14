@@ -2,8 +2,28 @@
 let express = require('express'); // Express Server
 let bodyParser = require('body-parser'); // Post Body Request
 let exphbs = require('express-handlebars');
+//mongoo connection
+/*
+let mongoose = require('mongoose');
+let request = require('request');
+let cheerio = require('cheerio');
+app.use(logger('dev'));
+let databaseUri = 'mongodb://localhost/week18day3mongose';
+if (process.env.MONGODB.URO){
+  mongoose.connect(process.env.MONGODB_URI);
+} else {
+  mongoose.connect(databaseUri);
+}
+let db = mongoose.connection;
+db.on('error',function(err){
+  console.log('Mongoose Error: ' err);
+});
+db.once('open',function(){
+  console.log('Mongoose connection succesful, ');
+});
+*/
 
-var db = require("./models"); 
+let db = require("./models"); 
 
 
 let PORT = process.env.PORT || 8080; 
